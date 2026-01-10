@@ -1,0 +1,6 @@
+#ifndef MBSCRIPT_INTERPRETER_H
+#define MBSCRIPT_INTERPRETER_H
+
+class Interpreter {};
+
+#endif //MBSCRIPT_INTERPRETER_H

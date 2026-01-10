@@ -15,4 +15,10 @@ add_executable(mbs
         src/frontend/token.cpp
         includes/mbs/frontend/exceptions.h
         src/frontend/exceptions.cpp
+        includes/mbs/frontend/ast.h
+        src/frontend/ast.cpp
+        src/backend/runtime.cpp
+        includes/mbs/backend/runtime.h
+        includes/mbs/backend/interpreter.h
+        src/backend/interpreter.cpp
 )
