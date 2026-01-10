@@ -47,7 +47,13 @@ void mbs::Lexer::lexNumericals() {
 
     // Support the following structure ..
     // 123 // 123.456 // 123.to_u8() // 123.456.abs() // 123.123.floor() // etc
+    bool has_dot = false;
     while (std::isdigit(peek()) || peek() == '.') {
+        if (peek() == '.') {
+            // We already have a float number, additional dots are for ops
+            if (has_dot) break;
+            has_dot = true;
+        }
         num += advance();
     }
 
