@@ -1,6 +1,6 @@
 #include "../../includes/mbs/frontend/token.h"
 
-std::string mbs::toString(const TokenType tt) {
+std::string mbs::tokenTypeToString(const TokenType tt) {
     std::string name;
     switch (tt) {
         case TokenType::TOK_STRING:

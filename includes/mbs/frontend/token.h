@@ -57,7 +57,7 @@ namespace mbs {
     };
 
 
-    std::string toString(TokenType tt);
+    std::string tokenTypeToString(TokenType tt);
 
     struct Token {
         std::string value; // Token Value
@@ -71,7 +71,7 @@ namespace mbs {
             os << std::string{"\tvalue: "} << m.value << "," << std::endl;
             os << std::string{"\tpos: { start: "} << m.pos.start << ", end: " << m.pos.end << ", line: " << m.pos.line
                     << " }," << std::endl;
-            os << std::string{"\ttype: "} << std::format("{}", toString(m.type)) << std::endl;
+            os << std::string{"\ttype: "} << std::format("{}", tokenTypeToString(m.type)) << std::endl;
             os << std::string{"}"} << std::endl;
             return os;
         }

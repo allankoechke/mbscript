@@ -18,11 +18,12 @@ int main() {
             break;
         }
 
-        mbs::Lexer lexer;
-        auto tokens = lexer.lex(cmd);
-        for (auto token : tokens) {
-            std::cout << token << std::endl;
-        }
+        mbs::Parser parser;
+        parser.parse(cmd);
+        std::cout << parser.toString();
+        // for (auto token : tokens) {
+        //     std::cout << token << std::endl;
+        // }
     }
 
     return 0;
